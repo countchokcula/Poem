@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stanzas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stanzas.each do |stanza| %>
+      <tr>
+        <td><%= link_to 'Show', stanza %></td>
+        <td><%= link_to 'Edit', edit_stanza_path(stanza) %></td>
+        <td><%= link_to 'Destroy', stanza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stanza', new_stanza_path %>

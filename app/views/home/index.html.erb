@@ -1,0 +1,9 @@
+<div id="wrap">
+  <ul id="poem">
+    <%= @stanzas.each do |stanza| %>
+      <li id="stanza">
+        <%= stanza.words %>
+      </li>
+    <% end %>
+  </ul>
+</div>
